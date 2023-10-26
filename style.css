@@ -76,22 +76,27 @@ body {
     justify-content: center;
     align-items: center;
 }
-.score-head {
+.game-head {
     height: 100px;
     display: flex;
     flex-direction: row;
 
-    background-color: blueviolet;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #C25EAC;
+
+    border-radius: 5px;
+
 }
 
-.score-head-player {
-    width: 50%;
+.game-head-players {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.score-head-player p {
+.game-head-players p {
     color: white;
     font-size: 20px;
     text-align: center;
@@ -110,12 +115,11 @@ body {
     justify-content: center;
     justify-items: center;
 
-
 }
 
 
 .children-container {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(231, 202, 202);
 
     display: flex;
     flex-direction: row;
@@ -125,8 +129,6 @@ body {
 
 
 .child-box {
-    background-color: brown;
-
     width: 200px;
     height: 200px;
 
@@ -135,6 +137,8 @@ body {
     flex-direction: row;
     justify-content: center;
     justify-items: center;
+
+    border-radius: 5px;
     
 }
 
@@ -145,7 +149,7 @@ body {
     text-align: center;
     color: white;
 
-    background-color: chocolate;
+    background-color: #C25EAC;
 
     padding: 0;
     margin: 0px;
@@ -153,6 +157,10 @@ body {
 
 .child-box p:active {
 
-    background-color: rgb(100, 193, 8);
+    background-color: #64c108;
+
+    box-shadow: 0px 0px 100px orange;
 }
+
+
 /* Game Play Part */
