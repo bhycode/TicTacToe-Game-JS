@@ -71,6 +71,11 @@
 
 /* Game Play Part */
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .score-head {
     height: 100px;
     display: flex;
@@ -86,8 +91,19 @@
     align-items: center;
 }
 
+.score-head-player p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+
+    font-weight: bold;
+}
+
+
 .main-box {
-    background-color: rgb(24, 51, 255);
+    background-color: rgb(166, 173, 221);
 
     display: flex;
     flex-direction: column;
@@ -128,7 +144,15 @@
 
     text-align: center;
     color: white;
+
+    background-color: chocolate;
+
+    padding: 0;
+    margin: 0px;
+}
+
+.child-box p:active {
+
+    background-color: rgb(100, 193, 8);
 }
 /* Game Play Part */
-
-
