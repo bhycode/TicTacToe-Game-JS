@@ -74,35 +74,64 @@
 
 /* Game Play Part */
 
-.score-head {
+/* Font */
+@font-face {
+    font-family: 'fontii';
+    src: url('fontii.ttf');
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'fontii' !important;
+}
+.game-head {
     height: 100px;
     display: flex;
     flex-direction: row;
 
-    background-color: blueviolet;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #C25EAC;
+
+    border-radius: 5px;
+
 }
 
-.score-head-player {
-    width: 50%;
+.game-head-players {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.game-head-players p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+
+    font-weight: bold;
+}
+
+
 .main-box {
-    background-color: rgb(24, 51, 255);
+    background-color: rgb(166, 173, 221);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     justify-items: center;
 
-
 }
 
 
 .children-container {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(231, 202, 202);
 
     display: flex;
     flex-direction: row;
@@ -112,8 +141,6 @@
 
 
 .child-box {
-    background-color: brown;
-
     width: 200px;
     height: 200px;
 
@@ -122,6 +149,8 @@
     flex-direction: row;
     justify-content: center;
     justify-items: center;
+
+    border-radius: 5px;
     
 }
 
@@ -131,39 +160,61 @@
 
     text-align: center;
     color: white;
+
+    background-color: #C25EAC;
+
+    padding: 0;
+    margin: 0px;
 }
+
+.child-box p:active {
+
+    background-color: #64c108;
+
+    box-shadow: 0px 0px 100px orange;
+}
+
 /* style of winner part */
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: purple; }
+}
+
+
 .win-message{
+    background-color: rgba(16, 244, 16, 0.578);
+    box-shadow: 1px 1px 20px green;
+    color: white;
+    width: 40%;
+    height:300px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* opacity: 0; */
 }
-/* .hidden{
-    display: none;
-} */
+.win-message.show {
+    opacity: 1; 
+}
 .win-message p{
     font-family: kavoon;
     font-size: 30px; 
 }
-.win-message h1{
-    font-family: Leckerli One; 
-    font-size: 40px;
+.win-message h1 {
+    font-family: Leckerli One;
+    font-size: 50px;
+    animation: colorChange 5s infinite;
 }
-.btns-div{
+.firework-div{
     display: flex;
-    gap:600px
-}
-.btns-div button{
-    border:none;
-    background-color: #0EADDF;
-    font-family: Kavoon; 
-    font-size: 20px;
-    padding: 10px 20px;
-}
-.btns-div button:hover{
-    background-color: #DF0E66;
-    cursor: pointer;
+gap:200px
 }
 /* Game Play Part */
 
 
+
+/* Game Play Part */
