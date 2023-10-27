@@ -4,18 +4,32 @@ let user2input = document.getElementById('user1input');
 let user1 = document.getElementById('user1');
 let user2 = document.getElementById('user2');
 
+
+//winner part
+const winMessage = document.querySelector(".win-message");
+
 // Game Play Part
+let stopPlay = false;
 let game_head = document.getElementById("game-head");
 
 
 
 function end(num1, num2, num3) {
     
-    game_head.innerHTML = `${boxes[num1]} winner`;
+    if(num1 === 0) {
+        game_head.innerHTML = "Game Over!";
+        stopPlay = true;
+    } else {
+        game_head.innerHTML = `${boxes[num1]} winner`;
+
+        document.getElementById("child-box" + num1).style.background = '#64c108';
+        document.getElementById("child-box" + num2).style.background = '#64c108';
+        document.getElementById("child-box" + num3).style.background = '#64c108';
+
+        stopPlay = true;
+    }
     
-    document.getElementById("box" + num1).style.background = '#64c108';
-    document.getElementById("box" + num2).style.background = '#64c108';
-    document.getElementById("box" + num3).style.background = '#64c108';
+    
 
     setInterval(function() {
         game_head.innerHTML += '.';
@@ -23,6 +37,7 @@ function end(num1, num2, num3) {
 
     setTimeout(function() {
         location.reload();
+        stopPlay = false;
     }, 4000);
 }
 
@@ -60,6 +75,7 @@ function winner() {
 
     } else if(boxes[1] != '' && boxes[2] != '' && boxes[3] != '' && boxes[4] != '' && boxes[5] != '' && boxes[6] != '' && boxes[7] != '' && boxes[8] != '' && boxes[9] != '') {
         end(0, 0, 0);
+        
     }
 }
 
@@ -69,11 +85,11 @@ let turn = 'X';
 function play(id) {
 
     let box = document.getElementById(id);
-    if(turn === 'X' && box.innerHTML === '') {
+    if(turn === 'X' && box.innerHTML === '' && !stopPlay) {
         box.innerHTML = 'X';
         turn = 'O';
         game_head.innerHTML = "O turn";
-    } else if(turn === 'O' && box.innerHTML === '') {
+    } else if(turn === 'O' && box.innerHTML === '' && !stopPlay) {
         box.innerHTML = 'O';
         turn = 'X';
         game_head.innerHTML = "X turn";
@@ -82,4 +98,11 @@ function play(id) {
     winner();
 }
 // Game Play Part
+
+
+//winner part
+winMessage.classList.add("show");
+
+winMessage.classList.remove("show");
+
 
