@@ -71,10 +71,19 @@
 
 /* Game Play Part */
 
+/* Font */
+@font-face {
+    font-family: 'fontii';
+    src: url('fontii.ttf');
+}
+
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-family: 'fontii' !important;
 }
 .game-head {
     height: 100px;

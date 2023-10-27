@@ -1,3 +1,9 @@
+
+
+
+
+
+// Game Play Part
 let game_head = document.getElementById("game-head");
 
 
@@ -73,6 +79,7 @@ function play(id) {
 
     winner();
 }
+// Game Play Part
 
 
 
