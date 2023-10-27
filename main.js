@@ -17,9 +17,9 @@ function end(num1, num2, num3) {
     } else {
         game_head.innerHTML = `${boxes[num1]} winner`;
 
-        document.getElementById("box" + num1).style.background = '#64c108';
-        document.getElementById("box" + num2).style.background = '#64c108';
-        document.getElementById("box" + num3).style.background = '#64c108';
+        document.getElementById("child-box" + num1).style.background = '#64c108';
+        document.getElementById("child-box" + num2).style.background = '#64c108';
+        document.getElementById("child-box" + num3).style.background = '#64c108';
 
         stopPlay = true;
     }
