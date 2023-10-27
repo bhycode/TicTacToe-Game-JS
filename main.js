@@ -1,4 +1,9 @@
 
+let user1input = document.getElementById('user1input');
+let user2input = document.getElementById('user1input');
+let user1 = document.getElementById('user1');
+let user2 = document.getElementById('user2');
+
 // Game Play Part
 let game_head = document.getElementById("game-head");
 
