@@ -1,5 +1,8 @@
 /* -----------------------------Style of home page ----------------------------------- */
 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Irish+Grover&family=Josefin+Sans&family=Kavoon&family=Leckerli+One&family=Mulish:wght@500&family=Oleo+Script&family=Playfair+Display&display=swap');
+
 .home-page{
     display: flex;
     align-items: center;
@@ -128,6 +131,38 @@
 
     text-align: center;
     color: white;
+}
+/* style of winner part */
+.win-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* .hidden{
+    display: none;
+} */
+.win-message p{
+    font-family: kavoon;
+    font-size: 30px; 
+}
+.win-message h1{
+    font-family: Leckerli One; 
+    font-size: 40px;
+}
+.btns-div{
+    display: flex;
+    gap:600px
+}
+.btns-div button{
+    border:none;
+    background-color: #0EADDF;
+    font-family: Kavoon; 
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.btns-div button:hover{
+    background-color: #DF0E66;
+    cursor: pointer;
 }
 /* Game Play Part */
 
