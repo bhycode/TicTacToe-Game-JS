@@ -1,8 +1,4 @@
 
-
-
-
-
 // Game Play Part
 let stopPlay = false;
 let game_head = document.getElementById("game-head");
@@ -75,8 +71,6 @@ function winner() {
 }
 
 
-
-
 let turn = 'X';
 
 function play(id) {
@@ -95,6 +89,4 @@ function play(id) {
     winner();
 }
 // Game Play Part
-
-
 
