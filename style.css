@@ -63,31 +63,81 @@
 
 
 
+
+
+
+
+
+
+/* Game Play Part */
+
+/* Font */
+@font-face {
+    font-family: 'fontii';
+    src: url('fontii.ttf');
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'fontii' !important;
+}
+.game-head {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #C25EAC;
+
+    border-radius: 5px;
+
+}
+
+.game-head-players {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-head-players p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+
+    font-weight: bold;
+}
+
+
 .main-box {
-    background-color: rgb(24, 51, 255);
+    background-color: rgb(166, 173, 221);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     justify-items: center;
 
-
 }
 
 
 .children-container {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(231, 202, 202);
 
     display: flex;
     flex-direction: row;
-    /* justify-content: center;
+    justify-content: center;
     justify-items: center; */
 }
 
 
 .child-box {
-    background-color: brown;
-
     width: 200px;
     height: 200px;
 
@@ -96,7 +146,30 @@
     flex-direction: row;
     justify-content: center;
     justify-items: center;
+
+    border-radius: 5px;
     
 }
 
+.child-box p {
+    width: 100%;
+    height: 100%;
 
+    text-align: center;
+    color: white;
+
+    background-color: #C25EAC;
+
+    padding: 0;
+    margin: 0px;
+}
+
+.child-box p:active {
+
+    background-color: #64c108;
+
+    box-shadow: 0px 0px 100px orange;
+}
+
+
+/* Game Play Part */
