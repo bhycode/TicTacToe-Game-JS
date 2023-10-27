@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-
 <body>
-
     <div class="home-page">
         <div class="game-name">
             <img src="images/game.jpg" alt="">
             <h1>TicTacToe</h1>
         </div>
-        <div class="user-names">
-            <div class="user1">
-                <p>User Name 1</p>  <input id="user1input" type="text" >
-            </div>
-            <div class="user2">
-                <p>User Name 2</p>  <input id="user2input" type="text" >
 
-            </div>
+        <!-- HTML form to input the names of both players -->
+        <form id="playerNamesForm" class="user-names">
+        <div class="user1">
+            <label for="player1Name">Player 1 Name: </label>
+            <input type="text" id="player1Name" /><br>
+        </div>
+        <div class="user2">
+            <label for="player2Name">Player 2 Name: </label>
+            <input type="text" id="player2Name" /><br>
         </div>
         <div class="start-button">
-            <a href="game-play.html"><button>Start</button></a>
+            <button type="button" id="startGameButton">Start Game</button>
         </div>
     </div>
     <script src='main.js'></script>
 </body>
+        </form>
 
+    </div>
+    <script>
+        document.getElementById("startGameButton").addEventListener("click", function () {
+            const player1Name = document.getElementById("player1Name").value;
+            const player2Name = document.getElementById("player2Name").value;
+            
+            // Store the names in localStorage for use on the next page
+            localStorage.setItem("player1Name", player1Name);
+            localStorage.setItem("player2Name", player2Name);
+            
+            // Redirect to the game page
+            window.location.href = "game-play.html";
+        });
+    </script>
+</body>
 </html>

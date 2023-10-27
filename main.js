@@ -8,28 +8,19 @@ let user2 = document.getElementById('user2');
 //winner part
 const winMessage = document.querySelector(".win-message");
 
+
 // Game Play Part
-let stopPlay = false;
 let game_head = document.getElementById("game-head");
 
 
 
 function end(num1, num2, num3) {
     
-    if(num1 === 0) {
-        game_head.innerHTML = "Game Over!";
-        stopPlay = true;
-    } else {
-        game_head.innerHTML = `${boxes[num1]} winner`;
-
-        document.getElementById("child-box" + num1).style.background = '#64c108';
-        document.getElementById("child-box" + num2).style.background = '#64c108';
-        document.getElementById("child-box" + num3).style.background = '#64c108';
-
-        stopPlay = true;
-    }
+    game_head.innerHTML = `${boxes[num1]} winner`;
     
-    
+    document.getElementById("box" + num1).style.background = '#64c108';
+    document.getElementById("box" + num2).style.background = '#64c108';
+    document.getElementById("box" + num3).style.background = '#64c108';
 
     setInterval(function() {
         game_head.innerHTML += '.';
@@ -37,7 +28,6 @@ function end(num1, num2, num3) {
 
     setTimeout(function() {
         location.reload();
-        stopPlay = false;
     }, 4000);
 }
 
@@ -75,9 +65,10 @@ function winner() {
 
     } else if(boxes[1] != '' && boxes[2] != '' && boxes[3] != '' && boxes[4] != '' && boxes[5] != '' && boxes[6] != '' && boxes[7] != '' && boxes[8] != '' && boxes[9] != '') {
         end(0, 0, 0);
-        
     }
 }
+
+
 
 
 let turn = 'X';
@@ -85,11 +76,11 @@ let turn = 'X';
 function play(id) {
 
     let box = document.getElementById(id);
-    if(turn === 'X' && box.innerHTML === '' && !stopPlay) {
+    if(turn === 'X' && box.innerHTML === '') {
         box.innerHTML = 'X';
         turn = 'O';
         game_head.innerHTML = "O turn";
-    } else if(turn === 'O' && box.innerHTML === '' && !stopPlay) {
+    } else if(turn === 'O' && box.innerHTML === '') {
         box.innerHTML = 'O';
         turn = 'X';
         game_head.innerHTML = "X turn";
@@ -98,11 +89,15 @@ function play(id) {
     winner();
 }
 // Game Play Part
+// Get all user input elements with the class "user-input"
+const userInputs = document.querySelectorAll('.user-input');
 
-
-//winner part
-winMessage.classList.add("show");
-
-winMessage.classList.remove("show");
-
+// Add input event listeners to all user input elements
+userInputs.forEach(function(input, index) {
+    input.addEventListener('input', function() {
+        const playerName = input.value;
+        const playerElement = document.querySelector(`.players p:nth-child(${index + 1})`);
+        playerElement.textContent = `Player ${index + 1}: ${playerName}`;
+    });
+});
 

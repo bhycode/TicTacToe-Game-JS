@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,22 +7,22 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
-
 <body>
-
-
     <div>
 
         <!-- Score Head -->
         <div class="game-head">
             <div class="game-head-players">
-                <p id="game-head">Tic Tac Toe</p>
+                <p id = "game-head">Tic Tac Toe</p>
             </div>
         </div>
         <!-- Score Head -->
 
+
+
+
         <!-- Main box !-->
-        <div class="main-box">
+        <div class = "main-box">
 
             <!-- Line #1 -> + + + -->
             <div class="children-container">
@@ -42,16 +41,17 @@
                 <div class="child-box" onclick="play('box3')">
                     <p id="box3"></p>
 
+                <div class="child-box" onclick="play('box1')">
                     <p id ="box1"></p>
                 </div>
 
 
-                <div id="child-box2" class="child-box" onclick="play('box2')">
+                <div class="child-box" onclick="play('box2')">
                     <p id ="box2"></p>
                 </div>
 
 
-                <div id="child-box3" class="child-box" onclick="play('box3')">
+                <div class="child-box" onclick="play('box3')">
                     <p id ="box3"></p>
                 </div>
 
@@ -80,12 +80,12 @@
                 </div>
 
 
-                <div id="child-box5" class="child-box" onclick="play('box5')">
+                <div class="child-box" onclick="play('box5')">
                     <p id ="box5"></p>
                 </div>
 
 
-                <div id="child-box6" class="child-box" onclick="play('box6')">
+                <div class="child-box" onclick="play('box6')">
                     <p id ="box6"></p>
                 </div>
 
@@ -111,18 +111,18 @@
                 <div class="child-box" onclick="play('box9')">
                     <p id="box9"></p>
 
+                <div class="child-box" onclick="play('box7')">
                     <p id ="box7"></p>
                 </div>
 
 
-                <div id="child-box8" class="child-box" onclick="play('box8')">
+                <div class="child-box" onclick="play('box8')">
                     <p id ="box8"></p>
                 </div>
 
 
-                <div id="child-box9" class="child-box" onclick="play('box9')">
+                <div class="child-box" onclick="play('box9')">
                     <p id ="box9"></p>
-
                 </div>
 
             </div>
@@ -133,17 +133,15 @@
         </div>
         <!-- Main box -> 3 * 3 -->
 
-
-
-    </div>
-    <div class="win-message ">
-        <p>The winner is : </p>
-        <h1>Congratulations</h1>
-        <div class="firework-div">
-            <img src="images/firework.png" alt="firework" height="60" width="60px">
-            <img src="images/firework.png" alt="firework" height="60" width="60px">
+        <div class="players">
+            <h2>Player Names</h2>
+            <span id="player1NameDisplay"></span><br>
+            <span id="player2NameDisplay"></span>
+            
         </div>
-       
+
+
+
     </div>
 
 
@@ -156,7 +154,18 @@
         </div>
     </div>
 
-    <script src='main.js'></script>
-</body>
 
+  
+    <script>
+        // Retrieve player names from localStorage
+        const player1Name = localStorage.getItem("player1Name");
+        const player2Name = localStorage.getItem("player2Name");
+        
+        // Display player names
+        document.getElementById("player1NameDisplay").textContent = "Player 1 Name: " + player1Name;
+        document.getElementById("player2NameDisplay").textContent = "Player 2 Name: " + player2Name;
+        
+        // Game logic can be added here...
+    </script>
+</body>
 </html>
