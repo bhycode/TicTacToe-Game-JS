@@ -1,9 +1,12 @@
 
+<<<<<<< HEAD
 
 //winner part
 const winMessage = document.querySelector(".win-message");
 
 
+=======
+>>>>>>> 0692d59d9be2b395f8adfc647b37ca0a87c012a8
 // Game Play Part
 let stopPlay = false;
 let game_head = document.getElementById("game-head");
@@ -18,9 +21,9 @@ function end(num1, num2, num3) {
     } else {
         game_head.innerHTML = `${boxes[num1]} winner`;
 
-        document.getElementById("box" + num1).style.background = '#64c108';
-        document.getElementById("box" + num2).style.background = '#64c108';
-        document.getElementById("box" + num3).style.background = '#64c108';
+        document.getElementById("child-box" + num1).style.background = '#64c108';
+        document.getElementById("child-box" + num2).style.background = '#64c108';
+        document.getElementById("child-box" + num3).style.background = '#64c108';
 
         stopPlay = true;
     }
@@ -76,8 +79,6 @@ function winner() {
 }
 
 
-
-
 let turn = 'X';
 
 function play(id) {
@@ -97,9 +98,12 @@ function play(id) {
 }
 // Game Play Part
 
+<<<<<<< HEAD
 
 //winner part
 winMessage.classList.add("show");
 
 winMessage.classList.remove("show");
 
+=======
+>>>>>>> 0692d59d9be2b395f8adfc647b37ca0a87c012a8
