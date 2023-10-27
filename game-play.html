@@ -95,6 +95,13 @@
         </div>
         <!-- Main box -> 3 * 3 -->
 
+        <div class="players">
+            <h2>Player Names</h2>
+            <span id="player1NameDisplay"></span><br>
+            <span id="player2NameDisplay"></span>
+            
+        </div>
+
 
 
     </div>
@@ -103,6 +110,17 @@
 
 
 
-    <script src='main.js'></script>
+  
+    <script>
+        // Retrieve player names from localStorage
+        const player1Name = localStorage.getItem("player1Name");
+        const player2Name = localStorage.getItem("player2Name");
+        
+        // Display player names
+        document.getElementById("player1NameDisplay").textContent = "Player 1 Name: " + player1Name;
+        document.getElementById("player2NameDisplay").textContent = "Player 2 Name: " + player2Name;
+        
+        // Game logic can be added here...
+    </script>
 </body>
 </html>

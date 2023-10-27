@@ -83,6 +83,19 @@ function play(id) {
     winner();
 }
 // Game Play Part
+//part of hamza 'get user name'
+// Get all user input elements with the class "user-input"
+const userInputs = document.querySelectorAll('.user-input');
+
+// Add input event listeners to all user input elements
+userInputs.forEach(function(input, index) {
+    input.addEventListener('input', function() {
+        const playerName = input.value;
+        const playerElement = document.querySelector(`.players p:nth-child(${index + 1})`);
+        playerElement.textContent = `Player ${index + 1}: ${playerName}`;
+    });
+});
+
 
 
 

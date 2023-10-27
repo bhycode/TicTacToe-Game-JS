@@ -133,7 +133,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    justify-items: center; */
+    justify-items: center; 
 }
 
 
@@ -172,4 +172,8 @@ body {
 }
 
 
-/* Game Play Part */
+/* Game Play Part*/
+.players{
+    display: flex;
+    justify-content: space-around;
+}
