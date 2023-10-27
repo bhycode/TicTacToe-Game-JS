@@ -83,7 +83,6 @@ function play(id) {
     winner();
 }
 // Game Play Part
-//part of hamza 'get user name'
 // Get all user input elements with the class "user-input"
 const userInputs = document.querySelectorAll('.user-input');
 
