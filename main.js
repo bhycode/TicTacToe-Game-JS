@@ -5,6 +5,7 @@ let game_head = document.getElementById("game-head");
 
 
 function end(num1, num2, num3) {
+    
     game_head.innerHTML = `${boxes[num1]} winner`;
     
     document.getElementById("box" + num1).style.background = '#64c108';
@@ -52,6 +53,8 @@ function winner() {
     } else if(boxes[3] === boxes[5] && boxes[5] === boxes[7] && boxes[7] != '') {
         end(3, 5, 7);
 
+    } else if(boxes[1] != '' && boxes[2] != '' && boxes[3] != '' && boxes[4] != '' && boxes[5] != '' && boxes[6] != '' && boxes[7] != '' && boxes[8] != '' && boxes[9] != '') {
+        end(0, 0, 0);
     }
 }
 
